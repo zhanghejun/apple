@@ -1,0 +1,722 @@
+@import"base";
+.header{ 
+	width:auto;
+	height: 44px;
+	background:rgba(0,0,0,0.8);
+	margin: 0 auto;
+    z-index:22222;
+}
+.header-inner{
+	max-width:1024px;
+	height: 44px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.nav{
+	text-align: justify;
+	height: 44px;
+	&::after{
+      content:'';
+      display: inline-block;
+      line-height:0;
+      height:0;
+      width: 100%;
+	}
+	li{
+		display: inline-block;
+		text-align: center;
+		line-height: 44px;
+		padding:0 8px;
+	}
+	li{
+		transition:all 0.8s ease;
+	}
+	li:hover{
+		opacity: 0.6;
+	}
+	.apple{
+	background: url(../img/apple.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.li1{
+	width: 40px;
+	height: 48px;
+	display: none;
+}
+.mac{
+	background: url(../img/mac.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.ipad{
+	background: url(../img/ipad.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.iphone{
+	background: url(../img/iphone.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.watch{
+	background: url(../img/watch.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.tv{
+	background: url(../img/tv.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.music{
+	background: url(../img/music.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.support{
+	background: url(../img/support.svg) no-repeat center center;
+	width:60px;
+	height:44px;
+    display: inline-block;
+}
+.bag{
+	background: url(../img/bag.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+.search{
+	background: url(../img/sousuo.svg) no-repeat center center;
+	width:40px;
+	height:44px;
+    display: inline-block;
+}
+
+}
+@include ons{
+  .sss{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+  .header{
+    background: rgb(0,0,0);
+  }
+  .header-inner{
+    background: black;
+    z-index: 55555;
+  }
+  .xialanav{
+    opacity: 0;
+    position: fixed;
+    left:0;
+    right:0;
+    top:48px;
+    bottom:0;
+    background:black;
+    z-index:555;
+    padding:10px 45px;
+    transform: translateY(-700px);
+    transition:all .6s ease;
+   .nav  li{
+      width:100%;
+      display: block;
+      border-bottom: 1px solid #333333;
+      background-position: left;
+    }
+  }
+  .xialanav.active{
+    opacity: 1;
+    transform:translateY(0)
+  }
+	.header,.nav{;
+      height: 48px;
+      z-index: 999;
+	}
+	.nav.active{
+		.li1{
+			cursor: pointer;
+			.hang{
+			transform:rotateZ(45deg);
+			position: absolute;
+			left:0;
+			bottom:0;
+			right:0;
+			top:0;
+			margin:auto;
+			transition:all .6s ease;
+		}
+		    .shu{
+			transform:rotateZ(-45deg);
+			position: absolute;
+			left:0;
+			bottom:0;
+			right:0;
+			top:0;
+			margin:auto;
+			transition:all .6s ease;
+		}
+		}
+		
+	}
+	.nav{
+		.li1{
+			cursor: pointer;
+			display: inline-block;
+			position:relative;
+			$sep:20px;
+			.hang{
+				width: 17px;
+				height: 1px;
+				background: #fff;
+				@include zuoyou;
+				top:$sep;
+				transition:all .6s ease;
+			}
+			.shu{
+				width: 17px;
+				height: 1px;
+				background: #fff;
+				@include zuoyou;
+				bottom:$sep;
+				transition:all .6s ease;
+			}
+		}
+		.mac{display:none;}
+		.ipad{display:none;}
+		.iphone{display:none;}
+		.watch{display:none;}
+		.tv{display:none;}
+		.music{display:none;}
+		.support{display:none;}
+		.search{display:none;}
+	}
+}
+.youyou{
+    overflow: hidden;
+    cursor: pointer;
+    transform:translateX(1100px);
+	transition:all .6s ease;
+	    float:right;
+    	width:0;
+    	height:0;
+        opacity: 0;
+        margin-right:-105px;
+    	.hang{
+    		width: 17px;
+		    height: 1px;
+		    background:#fff;
+            z-index: 1000;
+		    @include zuoyou;
+		    top:20px;
+    		transform:rotateZ(45deg);
+    	}
+    	.shu{
+    		width: 17px;
+		    height: 1px;
+            z-index: 1000;
+		    background:#fff;
+		    @include zuoyou;
+		    top:20px;
+    		transform:rotateZ(-45deg);
+    	}
+}
+.nav.active .ooo{
+	display: none;
+}
+.youyou.suo{
+    opacity: 1;
+    width: 44px;
+    height: 44px;
+    z-index: 2000;
+    transform:translateX(-280px)
+}
+.searching.suo{
+    transform:translateX(0);
+    width: 800px;
+    height:auto;
+}
+.searching{
+    overflow: hidden;
+    transform:translateX(1100px);
+    transition:all .6s ease;
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+	width:0;
+	height:0;
+    .sear{ 
+    	width: 44px;
+    	height: 44px;
+    	position: absolute;
+    	left:0;
+    	top:0;
+    	background:url(../img/sousuo.svg) no-repeat center center;
+    }
+   
+    input{ 
+    	position: absolute;
+    	left:44px;
+    	top:0;
+    	width: 712px;
+    	height: 44px;
+    	outline: none;
+    	border: none;
+    	z-index: 200;
+    	text-indent:10px;
+    	background: transparent;
+    }
+}
+.main.suo{
+    width: 800px;
+    height: 230px;
+    transform:translateX(0);
+    ul{
+         @for $i from 1 through 5{
+                .findli#{$i}{
+                     transform:translateX(0);
+                    transition:all 0.6s ease #{$i*0.1}s;
+                }
+            }
+    }
+}
+    .main{ 
+        overflow: hidden;
+        transition:all .8s ease;
+        transform:translateX(1300px); 
+        width:0;
+        height:0;
+        background:#fff;  
+        position:absolute;
+        box-shadow:0 0 3px #000;
+        left:0;
+        right:0;
+        top:44px;
+        z-index: 8000;
+        margin:auto;
+        .qui{
+            float:left;
+            width: 100%;
+            height: 45px;
+            line-height:60px;
+            font-size: 10px;
+            text-indent:10px;
+            color:#999999;
+        }
+        ul{
+            float:left;
+            width: 100%;
+            li{
+                transform:translateX(1300px);
+                    text-indent: 10px;
+                    width: 96%;
+                    margin:auto;
+                    height:30px;
+                    line-height:30px;
+                    margin-top: 4px; 
+                         &:hover{
+            background-color: #F2F2F2;
+            a{
+                color:#0188CC;
+            }
+          }
+            } 
+            a{
+                color:#999999;
+            }
+          }
+        }  
+.banner{
+    overflow: hidden;
+	margin:0 auto;
+    width:100%;
+    height:606px;
+    &:hover{
+        .left-bnt{
+            opacity:1;
+        }
+        .right-bnt{
+            opacity:1;
+        }
+    }
+    .lione{
+    	width: auto;
+    	font-size: 40px;
+    	line-height: 60px;
+    	text-align: center;
+        color:#231F20;
+    }
+    
+    a{
+        overflow: hidden;
+        position: absolute;
+        left:0;
+        top:44px;
+        right:0;
+        bottom:0;
+        width:100%;
+        height: 100%;
+        z-index:55;
+        img{
+        position: absolute;
+        left:0;
+        right:0;
+        margin:auto;  
+       } 
+       @include ons{
+            img{
+                width: 50%;
+                bottom:30%;
+            }
+        }
+        @include onm{
+            img{
+                width:75%;
+            }
+        }
+    }
+    .litwo{
+    	width: auto;
+    	font-size: 30px;
+    	text-align: center;
+    	line-height: 60px;
+        color:#333333;
+    }
+
+    .left-bnt{
+        transition:opacity .8s ease;
+        opacity: 0;
+        cursor: pointer;
+    	width:67px;
+    	height:128px;
+    	position: absolute;
+    	left:0;
+    	top:50%;
+    	margin-top:-35px;
+    	z-index: 55; 
+        background-image: url(../img/1.png)
+    }
+
+    .right-bnt{
+        transition:opacity .8s ease;
+        opacity: 0;
+        cursor: pointer;
+    	width: 67px;
+    	height:128px;
+    	position: absolute;
+    	right:0;
+    	top:50%;
+    	margin-top:-35px;
+    	z-index: 55; 
+        background-image: url(../img/2.png)
+    }
+    .point{
+        width: 100px;
+        height: 10px;
+        position: absolute;
+        bottom:10px;
+        left:0;
+        right:0;
+        margin:auto;
+        z-index: 200;
+        li{
+            width: 8px;
+            height: 8px;
+            background-color:#999999;
+            border-radius: 50%;
+            float:left;
+            margin:0 7px;
+            cursor: pointer;
+            &:hover{
+              background-color:#666666;  
+            }
+        }
+    }	
+}
+@include ons{
+    .banner{
+        height: 538px;
+    }
+}
+.bian{
+    max-width:100%;
+    height:202px;
+    background-color: #fff;
+    .tu.row{
+       position: relative;
+        &::after{
+        content:'';
+        display: block;
+        clear:both;
+        line-height: 0;
+        height:0;
+     }
+     .col{
+        float:left;
+        height:200px;
+        padding: 10px 10px;
+        box-sizing:border-box;
+        .v{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            box-sizing:border-box;
+            background:url(../img/6.jpg) no-repeat center center;
+            background-size:cover;
+            height: 200px;
+        }
+        .q{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            box-sizing:border-box;
+            background:url(../img/7.jpg) no-repeat center center;
+            background-size:cover;
+            height: 200px;
+        }
+        .w{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            box-sizing:border-box;
+            background:url(../img/8.jpg) no-repeat center center;
+            background-size:cover;
+            height: 200px;
+        }
+        .e{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background: red;
+            border:2px solid #fff;
+            box-sizing:border-box;
+            background:url(../img/9.jpg) no-repeat center center;
+            background-size:cover;
+            height: 200px;
+        }
+    }
+    }
+}
+@include onm{
+    .bian{
+       width:1068px; 
+       height: 404px;
+    }
+}
+@include ons{
+    .bian{
+        width: 768px;
+       height:808px;
+    }
+}
+.foot{
+    width:100%;
+    height: 370px;
+    background-color:#F2F2F2;
+    .kuang{
+        max-width:1000px;
+        height: 270px;
+        margin:0 auto;
+    }
+    ul{
+        width:20%;
+        height: 270px;
+        float:left;
+        .ert{
+            line-height:24px;
+            text-align: left;
+            text-indent: 10px;
+            height: 24px;
+            color:#333333;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        li{
+            line-height:24px;
+            text-align: left;
+            text-indent: 10px;
+            height: 24px;
+            color:#333333;
+            font-size: 12px;
+            a{
+                color:#666666;
+                &:hover{
+                    color:#333333;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.banquan{
+    max-width: 1000px;
+    height:50px;
+    margin:0 auto;
+    font-size:8px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    a{
+        color:#0088CC;
+        &:hover{
+          color:#000;
+          text-decoration: underline;
+        }
+    }
+}
+.guojia{
+    overflow: hidden;
+    max-width: 1000px;
+    height: 50px;
+    margin:0 auto;
+    .zi{
+        float:left;
+        width:280px;
+        height: 50px;
+        font-size: 12px;
+    line-height: 50px;
+    line-height:40px;
+    color:#666666;
+    }
+    ul{
+        float:left;
+        width: 500px;
+        height: 50px;
+        margin-left:15px;
+        li{
+            line-height: 20px;
+            border-right:1px solid #D6D6D6;
+            color: #666666;
+            padding: 0 7px;
+            height:20px;
+            text-align: center;
+            float:left;
+            margin-top:10px;
+            a{
+                color:#666666;
+                &:hover{
+                    color:#000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .qizi{
+        width: 100px;
+        margin-left:900px;
+        height: 50px;
+        img{
+            width: 16px;
+            height: 16px;
+            float:left;
+            margin-top:12px;
+        }
+        a{
+            margin-left: 5px;
+            font-size: 12px;
+            line-height: 40px;
+            color:#666666;
+            &:hover{
+                color:#000;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@include ons{
+    .foot{
+        width: 100%;
+        height: auto;
+        .kuang{
+            width: 100%;
+            height:287px;
+            ul{
+            width:100%;
+            height:auto;
+            .ert{
+                display: block;
+                width:100%;
+                height:40px;
+                line-height: 40px;
+                color:000000;
+                border-bottom: 1px solid #E3E3E3;
+            }
+            li{
+                width:100%;
+                display: none;
+                height: 0;
+            }
+        }
+        }
+        .banquan{
+            width: 100%;
+            font-size: 10px;
+            height:40px;
+        }
+        .guojia{
+            width: 100%;
+            height: auto;
+            .zi{
+                float:left;
+                width: 100%;
+                height: 100%;
+            }
+            ul{
+                float:left;
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+            }
+            .qizi{
+                float:left;
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+@include onm{
+    .kuang{
+        width: 800px;
+    }
+    .banquan{
+        width: 800px;
+    }
+    .guojia{
+        width: 800px;
+    }
+}
